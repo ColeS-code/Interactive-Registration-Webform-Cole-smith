@@ -22,10 +22,14 @@ jobRole.addEventListener("change", event => {
     }
 });
 
-//
+//*T shirt Role */ 
 
+const design = document.getElementById("design");
 
+const color = document.getElementById("color");
 
+const option = document.getElementById("option").children; 
 
+color.disabled = true;
 
 
