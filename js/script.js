@@ -3,6 +3,10 @@ function nameFocus() {
     document.getElementById("name").focus();
 }
 console.log(nameFocus);
+
 //
+const displayOtherJob =  document.getElementById("")
+const otherJobFunc = 
+
 
 
