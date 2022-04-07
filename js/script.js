@@ -28,11 +28,16 @@ const design = document.getElementById("design");
 
 const color = document.getElementById("color");
 
-const option = document.getElementById("option").children // fix this.
+const option = document.getElementById("color").children;
 
 color.disabled = true;
 
 design.addEventListener("change", event => {
+    color.disabled = false;
+    for (i) { 
+    const value = event.target.value
+    const Theme = document.getAttribute("data-theme");
+    
 
-
+   
 });
