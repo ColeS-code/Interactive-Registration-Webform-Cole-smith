@@ -1,5 +1,5 @@
 
-//*Name Focus State*/ gets the id of 'name' to add a focus state to. Snippet from: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus#focus_on_a_text_field
+//*Name Focus State*/ gets the id of 'name' to add a focus state to mtext field. Snippet from: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus#focus_on_a_text_field
 
 focusMethod = function getFocus() {
     document.getElementById("name").focus();
@@ -28,8 +28,11 @@ const design = document.getElementById("design");
 
 const color = document.getElementById("color");
 
-const option = document.getElementById("option").children; 
+const option = document.getElementById("option").children // fix this.
 
 color.disabled = true;
 
+design.addEventListener("change", event => {
 
+
+});
