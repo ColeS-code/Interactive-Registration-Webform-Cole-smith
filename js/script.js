@@ -34,10 +34,18 @@ color.disabled = true;
 
 design.addEventListener("change", event => {
     color.disabled = false;
-    for (i) { 
-    const value = event.target.value
-    const Theme = document.getAttribute("data-theme");
-    
+    for (let i = 0; i < option.length; i++) {
+
+        const value = event.target.value;
+        const theme = option[i].getAttribute("data-theme");
+
+        if (value === theme) {
+            option.hidden[i] = false;
+
+        } else if (value !== theme) {
+            option.hidden[i] = true;
+        }
+    }
 
    
 });
