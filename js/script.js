@@ -54,3 +54,19 @@ design.addEventListener("change", event => {
 });
 
 // *register for activites section*
+
+const register = getElementById("activities");
+
+const totalPrice = getElementById("activities-cost");
+
+let total = 0;
+
+register.addEventListener("change", event => {
+    
+    const dataType = +event.target.getAttribute("data-cost");
+
+    for (let i = 0; i < dataType.length; i++) {
+
+    }
+});
+
