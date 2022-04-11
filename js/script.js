@@ -32,6 +32,7 @@ const option = document.getElementById("color").children;
 
 color.disabled = true;
 
+// listens for a change in the shirt design interface, allowing the user to pick a theme of shirt based on which option they select. 
 design.addEventListener("change", event => {
     color.disabled = false;
     for (let i = 0; i < option.length; i++) {
@@ -40,12 +41,12 @@ design.addEventListener("change", event => {
         const theme = option[i].getAttribute("data-theme");
 
         if (value === theme) {
-            option.hidden[i] = false;
+            option[i].hidden = false;
+            option[i].setAttribute("selcted", true);
 
         } else if (value !== theme) {
-            option.hidden[i] = true;
+            option[i].hidden = true;
+            option[i].removeAttribute("selected", false);
         }
-    }
-
-   
+    }  
 });
