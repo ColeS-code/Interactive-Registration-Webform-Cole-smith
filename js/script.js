@@ -55,18 +55,25 @@ design.addEventListener("change", event => {
 
 // *register for activites section*
 
-const register = getElementById("activities");
+const register = document.getElementById("activities");
 
-const totalPrice = getElementById("activities-cost");
+const totalPrice = document.getElementById("activities-cost");
 
 let total = 0;
 
+// listens for a check box to be checked, once checked, the total price is added or subtracted at the bottom of the fieldset. 
 register.addEventListener("change", event => {
     
     const dataType = +event.target.getAttribute("data-cost");
 
-    for (let i = 0; i < dataType.length; i++) {
+    const checkedBox = event.target;
 
+        if (checkedBox.checked) {
+            total = total + dataType; 
+        } else {
+            total = total - dataType;
+        }
+        totalPrice.innerHTML = `total:$${total}`;
     }
-});
+);
 
