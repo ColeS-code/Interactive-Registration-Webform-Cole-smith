@@ -77,3 +77,17 @@ register.addEventListener("change", event => {
     }
 );
 
+//
+
+const paymentMethod = document.getElementById("payment");
+
+const creditCard = document.getElementById("credit-card");
+
+const payPal = document.getElementById("paypal");
+
+const bitCoin = document.getElementById("bitcoin");
+
+payPal.hidden = true;
+bitCoin.hidden = true;
+
+paymentMethod.children(2).setAttribute("selected", true); 
