@@ -93,14 +93,17 @@ paymentMethod[1].selected = true;
 
 // NOT WORKING
 paymentMethod.addEventListener("change", event => {
+
     if (event.target.value === "bitCoin") {
         bitCoin.hidden = false;
         payPal.hidden = true;
         creditCard.hidden = true;
+
     } else if (event.target.value === "payPal") {
         payPal.hidden = false;
         bitCoin.hidden = true;
         creditCard.hidden = true;
+        
     } else {
         payPal.hidden = true;
         bitCoin.hidden = true;
