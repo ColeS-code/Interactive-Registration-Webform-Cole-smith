@@ -77,7 +77,7 @@ register.addEventListener("change", event => {
     }
 );
 
-//
+// *payment method section*
 
 const paymentMethod = document.getElementById("payment");
 
@@ -110,5 +110,24 @@ paymentMethod.addEventListener("change", event => {
         creditCard.hidden = false;
 
     }
-
 });
+
+//
+
+const userName = document.getElementById("name");
+
+const email = document.getElementById("email");
+
+const creditNumber = document.getElementById("cc-num");
+
+const zipCode = document.getElementById("zip-code");
+
+const cvv = document.getElementById("cvv");
+
+const form = document.querySelector("form");
+
+//
+
+form.addEventListener("submit", event => {
+    
+})
