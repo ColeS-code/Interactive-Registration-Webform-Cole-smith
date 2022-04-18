@@ -128,6 +128,22 @@ const form = document.querySelector("form");
 
 //
 
+function errorValidator(input, test){
+    const parent = input.parentElement;
+    if(!test){
+        parent.classList.add('not-valid');
+        parent.classList.remove('valid');
+        parent.lastElementChild.style.display = 'block';
+    }
+    if(test){
+        parent.classList.add('valid');
+        parent.classList.remove('not-valid');
+        parent.lastElementChild.style.display = 'none';
+    }
+    return test;
+
+
+
 form.addEventListener("submit", event => {
     
 })
