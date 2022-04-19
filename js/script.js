@@ -61,6 +61,8 @@ const totalPrice = document.getElementById("activities-cost");
 
 let total = 0;
 
+let activities = 0;
+
 // listens for a check box to be checked, once checked, the total price is added or subtracted at the bottom of the fieldset. 
 register.addEventListener("change", event => {
     
@@ -141,9 +143,44 @@ function validationTester(input, test){
         parent.lastElementChild.style.display = 'none';
     }
     return test;
+}
+
+const nameValidator = () => {
+    const nameValue = userName.value;
+
+}
+
+const emailValidator = () => {
+    const emailValue = email.value;
+}
+
+const creditValidator = () => {
+    const creditValue = creditNumber.value;
+}
+
+const zipValidator = () => {
+    const zipValue = zipCode.value;
+}
+
+const cvvValidator = () => {
+    const cvvValue = cvv.value;
+}
+
+const activitesValidator = () => {
+    const activityValue = register.value;
+}
+
+
+
 
 
 
 form.addEventListener("submit", event => {
-    
+
+    nameValidator();
+    emailValidator();
+    creditValidator();
+    zipValidator();
+    cvvValidator();
+
 });
