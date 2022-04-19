@@ -147,11 +147,16 @@ function validationTester(input, test){
 
 const nameValidator = () => {
     const nameValue = userName.value;
-
+    const testUsername = /^[a-zA-Z ]+$/.test(nameValue);
+    const test = validationTester(userName, testUsername); 
+    return test;
 }
 
 const emailValidator = () => {
     const emailValue = email.value;
+    const emailTest = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.com$/i.test(emailValue);
+    const test = validationTester(email, emailTest);
+    return test;
 }
 
 const creditValidator = () => {
