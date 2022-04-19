@@ -128,7 +128,7 @@ const form = document.querySelector("form");
 
 //
 
-function errorValidator(input, test){
+function validationTester(input, test){
     const parent = input.parentElement;
     if(!test){
         parent.classList.add('not-valid');
@@ -146,4 +146,4 @@ function errorValidator(input, test){
 
 form.addEventListener("submit", event => {
     
-})
+});
