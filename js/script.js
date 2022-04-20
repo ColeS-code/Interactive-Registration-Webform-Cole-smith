@@ -128,6 +128,8 @@ const cvv = document.getElementById("cvv");
 
 const form = document.querySelector("form");
 
+const activityBox = document.getElementById("activities-box")
+
 //
 
 function validationTester(input, test){
@@ -161,18 +163,29 @@ const emailValidator = () => {
 
 const creditValidator = () => {
     const creditValue = creditNumber.value;
+    const cardNumberTest = /^\d{13,16}$/.test(creditValue);
+    const test = validationTester(creditNumber, cardNumberTest);
+    return test;
 }
 
 const zipValidator = () => {
     const zipValue = zipCode.value;
+    const zipTest = /^\d{5}$/.test(zipValue);
+    const test = validationTester(zipCode, zipTest);
+    return test;
 }
 
 const cvvValidator = () => {
     const cvvValue = cvv.value;
+    const cvvTest = /^\d{3}$/.test(cvvValue);
+    const test = validationTester(cvv, cvvTest);
+    return test;
 }
 
 const activitesValidator = () => {
-    const activityValue = register.value;
+    const activityValue = activities >= 1;
+    const test = validationTester(activityBox, activityValue);
+    return test;
 }
 
 
