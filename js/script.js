@@ -64,6 +64,7 @@ let total = 0;
 let activities = 0;
 
 // listens for a check box to be checked, once checked, the total price is added or subtracted at the bottom of the fieldset. 
+
 register.addEventListener("change", event => {
     
     const dataType = +event.target.getAttribute("data-cost");
@@ -94,6 +95,7 @@ bitCoin.hidden = true;
 paymentMethod[1].selected = true;
 
 // listens for one of the payment options to be selected, once selected the other options are hidden.
+
 paymentMethod.addEventListener("change", event => {
 
     if (event.target.value === "bitcoin") {
@@ -188,10 +190,7 @@ const activitesValidator = () => {
     return test;
 }
 
-
-
-
-
+//
 
 form.addEventListener("submit", event => {
 
