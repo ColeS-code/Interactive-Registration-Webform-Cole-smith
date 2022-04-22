@@ -124,7 +124,7 @@ const email = document.getElementById("email");
 
 const creditNumber = document.getElementById("cc-num");
 
-const zipCode = document.getElementById("zip-code");
+const zipCode = document.getElementById("zip");
 
 const cvv = document.getElementById("cvv");
 
