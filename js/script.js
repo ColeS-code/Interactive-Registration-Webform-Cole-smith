@@ -132,6 +132,8 @@ const form = document.querySelector("form");
 
 const activityBox = document.getElementById("activities-box")
 
+const emailHint = document.getElementById("email-hint")
+
 //
 
 function validationTester(input, test){
@@ -200,4 +202,28 @@ form.addEventListener("submit", event => {
     zipValidator();
     cvvValidator();
 
+    if ( nameValidator() && emailValidator() && activitesValidator() ){
+
+    } else {
+        if(email.value === ''){
+            emailHint.style.display = 'block';
+            emailHint.innerHTML = 'Email field cannot be blank';
+        }
+        event.preventDefault();
+    }
+    if (paymentMethod.value === 'credit-card'){
+        if (creditValidator() && zipValidator() && cvvValidator() ){
+
+        } else {
+            event.preventDefault()
+        }
+    } 
 });
+
+
+
+
+
+
+
+
