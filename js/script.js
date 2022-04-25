@@ -116,7 +116,7 @@ paymentMethod.addEventListener("change", event => {
     }
 });
 
-//
+// *Validation*
 
 const userName = document.getElementById("name");
 
@@ -130,11 +130,11 @@ const cvv = document.getElementById("cvv");
 
 const form = document.querySelector("form");
 
-const activityBox = document.getElementById("activities-box")
+const activityBox = document.getElementById("activities")
 
 const emailHint = document.getElementById("email-hint")
 
-//
+// The function below allows for validation testing. then with the helper functions below it, the code will check the required fields for proper inputs.
 
 function validationTester(input, test){
     const parent = input.parentElement;
@@ -186,13 +186,13 @@ const cvvValidator = () => {
     return test;
 }
 
-const activitesValidator = () => {
+const activitesValidator = () => { // THIS CODE IS NOT WORKING**
     const activityValue = activities >= 1;
     const test = validationTester(activityBox, activityValue);
     return test;
 }
 
-//
+// Inside this event listener helper functions are called and the required fields for validation are checked. if they are not valid, helping messages will appear to guide the user.
 
 form.addEventListener("submit", event => {
 
@@ -220,12 +220,12 @@ form.addEventListener("submit", event => {
     } 
 });
 
-//
+// This event listener validates certain fields in realtime using the 'keyup' listener. helping messages appear if the fields are not valid.
 
 userName.addEventListener('keyup', event => {
 
     if (userName.value){
-        //Here();
+        nameValidator();
     }
 })
 
@@ -252,6 +252,20 @@ cvv.addEventListener('keyup', event => {
     cvvValidator();
 });
 
+// This loop is for accessiablioty. it adds or removes a focus/ blur state, when the user interacts with the webform.
+
+const checkbox = document.querySelectorAll('input[type="checkbox"]');
+
+for (let i = 0; i < checkbox.length; i++){
+
+    checkbox[i].addEventListener('focus', event => {
+        event.target.parentElement.classList.add('focus');
+    })
+
+    checkbox[i].addEventListener('blur', event => {
+        event.target.parentElement.classList.remove('focus');
+    })
+};
 
 
 
