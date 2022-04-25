@@ -220,6 +220,37 @@ form.addEventListener("submit", event => {
     } 
 });
 
+//
+
+userName.addEventListener('keyup', event => {
+
+    if (userName.value){
+        //Here();
+    }
+})
+
+email.addEventListener('keyup', event => {
+
+    if(email.value === ''){
+        emailHint.style.display = 'block';
+        emailHint.innerHTML = 'Email field cannot be blank';
+    } else if (!emailValidator()){
+        emailHint.innerHTML = 'Email address must be formatted correctly';
+    }
+    emailValidator();
+})
+
+creditNumber.addEventListener('keyup', event => {
+    cardNumberValidation();
+})
+
+zipCode.addEventListener('keyup', event => {
+    zipValidator();
+})
+
+cvv.addEventListener('keyup', event => {
+    cvvValidator();
+});
 
 
 
