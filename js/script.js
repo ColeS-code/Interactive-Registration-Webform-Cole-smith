@@ -63,13 +63,30 @@ let total = 0;
 
 let activities = 0;
 
-// listens for a check box to be checked, once checked, the total price is added or subtracted at the bottom of the fieldset. 
+// This listener allows the user to choose a workshop. The user is also prevented from choosing two classes that occur during the same time of day as well as listening for a check box to be checked, once checked the total price is added or subtracted at the bottom of the fieldset. 
 
 register.addEventListener("change", event => {
     
     const dataType = +event.target.getAttribute("data-cost");
 
     const checkedBox = event.target;
+
+
+    for (let i = 0; i < checkbox.length; i++){
+
+        if (checkedBox.getAttribute('data-day-and-time') === checkbox[i].getAttribute('data-day-and-time')){
+            if(checkedBox.checked){
+                checkbox[i].disabled = true;
+                checkbox[i].parentNode.classList.add('disabled');                
+            } else if (!checkedBox.checked){
+                checkbox[i].disabled = false;
+                checkbox[i].parentNode.classList.remove('disabled');
+            }
+        }
+        checkedBox.parentElement.classList.remove('disabled');
+        checkedBox.disabled = false;
+    } 
+
 
         if (checkedBox.checked) {
             total = total + dataType; 
