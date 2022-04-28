@@ -93,7 +93,7 @@ register.addEventListener("change", event => {
         } else {
             total = total - dataType;
         }
-        totalPrice.innerHTML = `total:$${total}`;
+        totalPrice.innerHTML = `total: $${total}`;
     }
 );
 
@@ -147,7 +147,7 @@ const cvv = document.getElementById("cvv");
 
 const form = document.querySelector("form");
 
-const activityBox = document.getElementById("activities")
+const activityBox = document.getElementById("activities-box")
 
 const emailHint = document.getElementById("email-hint")
 
@@ -203,7 +203,7 @@ const cvvValidator = () => {
     return test;
 }
 
-const activitesValidator = () => { // THIS CODE IS NOT WORKING**
+const activitiesValidator = () => { // THIS CODE IS NOT WORKING** //why
     const activityValue = activities >= 1;
     const test = validationTester(activityBox, activityValue);
     return test;
@@ -219,7 +219,7 @@ form.addEventListener("submit", event => {
     zipValidator();
     cvvValidator();
 
-    if ( nameValidator() && emailValidator() && activitesValidator() ){
+    if ( nameValidator() && emailValidator() && activitiesValidator() ){
 
     } else {
         if(email.value === ''){
