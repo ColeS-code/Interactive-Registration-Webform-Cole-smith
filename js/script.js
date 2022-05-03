@@ -204,7 +204,7 @@ const cvvValidator = () => {
 }
 
 const activitiesValidator = () => { // THIS CODE IS NOT WORKING** //why
-    const activityValue = activities >= 1;
+    const activityValue = register >= 1;
     const test = validationTester(activityBox, activityValue);
     return test;
 }
