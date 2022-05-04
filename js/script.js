@@ -223,7 +223,7 @@ form.addEventListener("submit", event => {
     if ( nameValidator() && emailValidator() && activitiesValidator() ){
 
     } else {
-        if(email.value === ''){
+        if (email.value === ''){
             emailHint.style.display = 'block';
             emailHint.innerHTML = 'Email field cannot be blank';
         }
