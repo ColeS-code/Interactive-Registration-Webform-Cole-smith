@@ -270,7 +270,7 @@ cvv.addEventListener('keyup', event => {
     cvvValidator();
 });
 
-// This loop is for accessability. it adds or removes a focus/ blur state, when the user interacts with the webform.
+// This loop is for accessibility. it adds or removes a focus/ blur state, when the user interacts with the webform.
 
 const checkbox = document.querySelectorAll('input[type="checkbox"]');
 
