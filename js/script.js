@@ -3,7 +3,7 @@
 
 focusMethod = function getFocus() {
     document.getElementById("name").focus();
-}
+};
 
 // *Job Role section* variables to store the select, and text id fields in job roles as well as hiding the other drop down menu as default.
 
@@ -219,7 +219,7 @@ form.addEventListener("submit", event => {
     zipValidator();
     cvvValidator();
     activitiesValidator();
-    
+
     if ( nameValidator() && emailValidator() && activitiesValidator() ){
 
     } else {
