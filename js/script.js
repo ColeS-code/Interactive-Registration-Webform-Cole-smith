@@ -55,7 +55,7 @@ design.addEventListener("change", event => {
 
 // *register for activites section*
 
-const register = document.getElementById("activities");
+const activitiesRegister = document.getElementById("activities");
 
 const totalPrice = document.getElementById("activities-cost");
 
@@ -65,7 +65,7 @@ let activities = 0;
 
 // This listener allows the user to choose a workshop. The user is also prevented from choosing two classes that occur during the same time of day as well as listening for a check box to be checked, once checked the total price is added or subtracted at the bottom of the fieldset. 
 
-register.addEventListener("change", event => {
+activitiesRegister.addEventListener("change", event => {
     
     const dataType = +event.target.getAttribute("data-cost");
 
@@ -147,11 +147,11 @@ const cvv = document.getElementById("cvv");
 
 const form = document.querySelector("form");
 
-const activityBox = document.getElementById("activities-box")
+const activitiesBox = document.getElementById("activities-box")
 
 const emailHint = document.getElementById("email-hint")
 
-// The function below allows for validation testing. then with the helper functions below it, the code will check the required fields for proper inputs.
+// The function below allows for validation of each field. then with the helper functions below it, the code will check the required fields for proper inputs.
 
 function validationTester(input, test){
     const parent = input.parentElement;
@@ -203,9 +203,9 @@ const cvvValidator = () => {
     return test;
 }
 
-const activitiesValidator = () => { // THIS CODE IS NOT WORKING** //why
-    const activityValue = register >= 1;
-    const test = validationTester(activityBox, activityValue);
+const activitiesValidator = () => { // THIS CODE IS NOT WORKING** //
+    const activitiesValue = activities >= 1;
+    const test = validationTester(activitiesBox, activitiesValue);
     return test;
 }
 
@@ -218,7 +218,8 @@ form.addEventListener("submit", event => {
     creditValidator();
     zipValidator();
     cvvValidator();
-
+    activitiesValidator();
+    
     if ( nameValidator() && emailValidator() && activitiesValidator() ){
 
     } else {
