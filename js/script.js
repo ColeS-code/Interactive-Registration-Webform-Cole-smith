@@ -44,7 +44,7 @@ design.addEventListener("change", event => {
 
         if (value === theme) {
             option[i].hidden = false;
-            option[i].setAttribute("selcted", true);
+            option[i].setAttribute("selected", true);
 
         } else if (value !== theme) {
             option[i].hidden = true;
@@ -270,7 +270,7 @@ cvv.addEventListener('keyup', event => {
     cvvValidator();
 });
 
-// This loop is for accessibility. it adds or removes a focus/ blur state, when the user interacts with the webform.
+// This loop is for accessibility. it adds or removes a focus/blur state, when the user interacts with the webform.
 
 const checkbox = document.querySelectorAll('input[type="checkbox"]');
 
