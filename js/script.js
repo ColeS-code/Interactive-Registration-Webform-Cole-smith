@@ -1,9 +1,9 @@
 
 // *Name Focus State* gets the id of 'name' to add a focus state to the text field. Snippet from: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus#focus_on_a_text_field
 
-focusMethod = function getFocus() {
-    document.getElementById("name").focus();
-};
+const focusMethod = document.getElementById("name").focus();
+
+focusMethod();
 
 // *Job Role section* variables to store the select, and text id fields in job roles as well as hiding the other drop down menu as default.
 
