@@ -89,9 +89,11 @@ activitiesRegister.addEventListener("change", event => {
 
 
         if (checkedBox.checked) {
-            total = total + dataType; 
+            total = total + dataType;
+            activities = activities + 1; 
         } else {
             total = total - dataType;
+            activities = activities - 1;
         }
         totalPrice.innerHTML = `total: $${total}`;
     }
@@ -177,7 +179,7 @@ const nameValidator = () => {
 
 const emailValidator = () => {
     const emailValue = email.value;
-    const emailTest = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.com$/i.test(emailValue);
+    const emailTest = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g.test(emailValue);
     const test = validationTester(email, emailTest);
     return test;
 }
@@ -203,7 +205,7 @@ const cvvValidator = () => {
     return test;
 }
 
-const activitiesValidator = () => { // THIS CODE IS NOT WORKING** //
+const activitiesValidator = () => { 
     const activitiesValue = activities >= 1;
     const test = validationTester(activitiesBox, activitiesValue);
     return test;
@@ -259,7 +261,7 @@ email.addEventListener('keyup', event => {
 })
 
 creditNumber.addEventListener('keyup', event => {
-    cardNumberValidation();
+    creditValidator();
 })
 
 zipCode.addEventListener('keyup', event => {
